@@ -3,11 +3,47 @@
     <head>
         <title>Advanced HTML Notes</title>
         <meta charset="UTF-8">
+        <style>
+            /* cascading style sheets
+            1. selcetor
+            2. declaration
+                a. property 
+                b. value
+             */
+             body{
+               color:lightseagreen;
+               background-color:rgba(14, 49, 57, 0.829)
+             }
+             h1{
+                color:ffffff;
+                color:aquamarine;
+                text-decoration:underline;
+                text-align:center;
+             }
+             #even{
+                color:antiquewhite
+             }
+             .numbered{
+                font-size: 20px;
+             }
+             ul{
+                background-color:rgba(17, 250, 250, 0.2);
+                border-radius:4px;
+                width: 25%;
+                height: 100px;
+                font-size: 1em;
+                border: dashed 2px navy;
+             }
+             #winter{
+                width:50%;
+             }
+
+        </style>
     </head>
     <body>
         <h1>Advanced HTML Notes</h1>
         <h3>lists: </h3>
-        <ol type="square"> <!--This is a numbered list-->
+        <ol type="i" class="numbered"> <!--This is a numbered list-->
             <li>this is the first thing</li>
             <li>this the second</li>
             <li>this comes third</li>
@@ -29,7 +65,7 @@
         </dl>
 
         <h3>attributes</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA8Am5zgrJBY-zfvo6GyFT4OLI3Oob_Yyy_8TLStml_w&s=10" alt="Mt timp" width="200px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA8Am5zgrJBY-zfvo6GyFT4OLI3Oob_Yyy_8TLStml_w&s=10" alt="Mt timp" id="winter">
         <div>
         <p>image from <a href="https://commons.wikimedia.org/wiki/File:Mount_Timpanogos_at_sunset.jpg" target="_blank"> wikimedia commons</a></p>
         </div>
