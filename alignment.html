@@ -15,7 +15,7 @@
                 background-color: blue;
                 color: azure;
                 text-align: center;
-                margin: 0 auto;
+                margin: 10 10;
             }
             #box-wrapper{
                 display: grid;
@@ -28,11 +28,16 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
+                margin: 10 10;
+            }
+            #duck{
+                width: 150px;
             }
         </style>
     </head>
     <body>
         <h1>alignment notes</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySOuL9ArtR6x2RueECbB1BRrGNWyDNmpTQNWl4DskIA&s=10" alt="duck" id="duck" onmouseout="changeImage()">
         <div id="box-wrapper">
             <div id="box" onmouseover="dissapear()" onmouseout="appear()">
                 <p>box 1</p>
@@ -67,6 +72,15 @@
         <button id="showMore" onclick="show()">Show More</button>
         <script>
         // makes webpage interactive
+        let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4cyca49k381Dy6YqsMmd0V7OYy5s_OIEDdPn7WMbbrg&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCJw0ymWxuqqNaj-81Z1oFBxF3wTBoWrggKt_Hdo9zPQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNMBp9ranqU6cWu8vziPc_uy-AQGJme1e6iucnpHxcg&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySOuL9ArtR6x2RueECbB1BRrGNWyDNmpTQNWl4DskIA&s=10"]
+        let current = 0
+        function changeImage(){
+            current += 1
+            if (current > 3){
+                current = 0
+            }
+            document.getElementById("duck").src = images[current]
+        }
         function color(){
             let newColor = document.getElementById("colorPicker").value
             document.getElementById("box").style.backgroundColor = "newColor"
