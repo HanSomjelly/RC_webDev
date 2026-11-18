@@ -2,10 +2,16 @@
 <html>
     <head>
         <title>Utah Rocks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <style>
             body{
                 background-color: rgb(219, 137, 37);
                 color: rgb(188, 80, 40);
+                font-family: "Hanalei Fill", system-ui;
+                font-weight: 10;
+                font-style: normal;
             }
             #arches2{
                 justify-content: right;
@@ -26,15 +32,30 @@
         <h1>Utah Rocks</h1>
         <p> utah has a lot of really nice rocks. we have canyon rocks, we have rocks in the shape of arches, and most of all, the rocks are a nice reddish orange</p>
 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn7uQiBqDc81XVcTxfWgjxOW15jenIID9y9a3nxyPUvA&s=10" alt="arches" width = 250px>
-        <img src="https://greg-willis.com/wp-content/uploads/2017/01/colonnade-arch-from-outside.jpg" alt="arches2" width="500px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn7uQiBqDc81XVcTxfWgjxOW15jenIID9y9a3nxyPUvA&s=10" alt="arches" width="30%">
+        <img src="https://greg-willis.com/wp-content/uploads/2017/01/colonnade-arch-from-outside.jpg" alt="arches2" width="60%">
         <div id="description">
-            <p>one of the best places in utah to visit is arches, arches is so cool and awesome and just such a great pace to visit</p>
+        <p>one of the best places in utah to visit is arches, arches is so cool and awesome and just such a great pace to visit</p>
         </div>
-
-
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFVzlEtaw39MsRwtW-3l6Qlv9drclVioR1KaSmW20TQ&s=10" alt="duck" id="duck" onmouseout="changeImage()">
+        <dl>reason 1</dl>
+        <dt>here is why</dt>
+        <dl>reason 2</dl>
+        <dt>here is why</dt>
+        <dl>reason 3</dl>
+        <dt>here is why</dt>
+        <dl>reason 4</dl>
+        <dt>here is why</dt>
     </body>
     <script>
-
+     let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFVzlEtaw39MsRwtW-3l6Qlv9drclVioR1KaSmW20TQ&s=10", "https://cdn2.picryl.com/photo/2015/01/01/double-arch-arches-national-park-2015-c11ff1-1024.jpg"]
+     let current = 0
+     function changeImage(){
+        current += 1
+        if (current > 3){
+            current = 0
+         }
+         document.getElementById("duck").src = images[current]
+      }
     </script>
 </html>
