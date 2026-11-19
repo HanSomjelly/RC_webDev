@@ -12,12 +12,18 @@
                 font-family: "Hanalei Fill", system-ui;
                 font-weight: 10;
                 font-style: normal;
+                font-size: xx-large;
+            }
+            ul{
+                font-size: x-large;
+                justify-content: left;
             }
             #arches2{
                 justify-content: right;
             }
             #arches1{
-                justify-content: left;
+                display: grid;
+
             }
             #description{
                 border-radius: 5px;
@@ -25,6 +31,14 @@
                 color:rgb(175, 88, 7);
                 font-size: large;
                 border: dashed 5px;
+            }
+            #switch{
+                width: 50%;
+            }
+            #hover{
+                background-color:rgb(253, 195, 124);
+                border-radius: 3px;
+                width: 100px;
             }
         </style>
     </head>
@@ -37,25 +51,26 @@
         <div id="description">
         <p>one of the best places in utah to visit is arches, arches is so cool and awesome and just such a great pace to visit</p>
         </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFVzlEtaw39MsRwtW-3l6Qlv9drclVioR1KaSmW20TQ&s=10" alt="duck" id="duck" onmouseout="changeImage()">
-        <dl>reason 1</dl>
-        <dt>here is why</dt>
-        <dl>reason 2</dl>
-        <dt>here is why</dt>
-        <dl>reason 3</dl>
-        <dt>here is why</dt>
-        <dl>reason 4</dl>
-        <dt>here is why</dt>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFVzlEtaw39MsRwtW-3l6Qlv9drclVioR1KaSmW20TQ&s=10"  alt="switch" id="switch" onmouseover="changeImage()">
+        <div id="hover">
+            <p>hover</p>
+        </div>
+        <ul>
+            <li>The arches have a unique naturally formed arch shape unlike many rocks of the modern world</li>
+            <li>The arches and the landscapes around them have a special reddish orange color </li>
+            <li>arches national park is a great place for hiking and enjoying nature</li>
+            <li>Reason 4</li>
+        </ul>
     </body>
     <script>
-     let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFVzlEtaw39MsRwtW-3l6Qlv9drclVioR1KaSmW20TQ&s=10", "https://cdn2.picryl.com/photo/2015/01/01/double-arch-arches-national-park-2015-c11ff1-1024.jpg"]
+     let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFVzlEtaw39MsRwtW-3l6Qlv9drclVioR1KaSmW20TQ&s=10", "https://cdn2.picryl.com/photo/2015/01/01/double-arch-arches-national-park-2015-c11ff1-1024.jpg", "https://cdn12.picryl.com/photo/2016/12/31/rock-arch-delicate-arch-arches-national-park-nature-landscapes-7367e0-1024.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoIxYVJr7WPsWyrTPM03PxDcfpEsoI0khNe4_9uFHWMe2_SsiOcXAhQCw&s=10"]
      let current = 0
      function changeImage(){
         current += 1
         if (current > 3){
             current = 0
          }
-         document.getElementById("duck").src = images[current]
+         document.getElementById("switch").src = images[current]
       }
     </script>
 </html>
